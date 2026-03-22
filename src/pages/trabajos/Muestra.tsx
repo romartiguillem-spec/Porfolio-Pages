@@ -13,7 +13,7 @@ export const Muestra = ({servicios}: Props ) => {
         // 3 sm:grid-cols-2 en pantallas pequeñas
         // 4 lg:grid-col-3 en pantallas gradnes
         // 5 bg-slate-950 color de fondo
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-slate-950 p-60">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-slate-950 p-30">
         {
             servicios.map((servicio) => (
             <Estilos
