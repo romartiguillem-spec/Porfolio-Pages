@@ -1,46 +1,36 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-// Hay que importar el Link
-import  { Link } from "react-router-dom"
-import type { IServicios } from "@/model/interfaces/IServicios"
-// esto es importate ya que los Props necesitan de una zona de la base de datos donde coger los estilos
+
+
+
+import type { ITrabajos } from "@/model/interfaces/ITrabajos";
+
+
 interface Props {
-    servicio: IServicios
+  trabajo: ITrabajos;
 }
 
-export const Estilos = ({servicio}: Props) => {
+export const Estilos = ({ trabajo }: Props) => {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0 ">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+    <a href={trabajo.URL} target="_blank" rel="noopener noreferrer">
+          <div className="group relative">
       <img
-        src={servicio.imagen}
-        alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+        alt={trabajo.titulo}
+        src={trabajo.Imagen}
+        className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
       />
-      <CardHeader>
-        <CardAction>
-          <Badge variant="secondary">Featured</Badge>
-        </CardAction>
-        <CardTitle>{servicio.titulo}</CardTitle>
-        <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
-        </CardDescription>
-      </CardHeader>
-      <CardFooter>
-        {/* Importante poner el link aqui para que usando el id del servicio*/}
-        <Link to= {`/trabajos/${servicio.id}`} className="w-full">
-        <Button className="w-full">View Event</Button>
-        </Link>
-      </CardFooter>
-    </Card>
-  )
-}
+      <div className="mt-4 flex justify-between">
+        <div>
+          <h3 className="text-sm text-white w-70 flex justify-center">
+            {/* Usamos Link para que funcione con tu AppRouter y el detalle */}
+            
+              <span aria-hidden="true" className="absolute inset-0" />
+              {trabajo.titulo}
+            
+          </h3>
+          <p className="mt-1 text-sm text-gray-400 text-center">{trabajo.categoria}</p>
+          
+        </div>
+      </div>
+    </div>
+    </a>
+  );
+};

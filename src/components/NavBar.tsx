@@ -6,7 +6,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 // 1. Array de opciones actualizado para rutas de React Router
 const opciones = [
   { title: 'Home', href: '/', current: false },
+  { title: 'Cursos', href: '/cursos', current: false },
   { title: 'Trabajos', href: '/trabajos', current: false },
+  { title: 'Follow', href: '/follow', current: false },
   { title: 'Contacto', href: '/contacto', current: false },
 ];
 

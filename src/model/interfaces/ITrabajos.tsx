@@ -1,8 +1,8 @@
-
-export interface IServicios {
+export interface ITrabajos {
     id:             number;
     titulo:         string;
     categoria:      string;
     descripcion:    string;
-    imagen:         string;
+    Imagen:         string;
+    URL:            string;
 }
