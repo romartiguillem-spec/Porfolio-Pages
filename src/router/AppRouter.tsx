@@ -8,7 +8,7 @@ import  Home  from "../pages/Home";
 import { CursoMuestra } from "../pages/Cursos/CursoMuestra";
 import  Contacto  from "../pages/Contacto";
 import { CursoDetalleMuestra } from "@/pages/Cursos/DetalleTrabajos/CursoDetalleMuestra";
-import { TrabajosMuestra } from "@/pages/Trabajos/TrabajosMuestra";
+import { TrabajosMuestra } from "@/pages/trabajos/TrabajosMuestra";
 import { MuestraFollow } from "@/pages/Follow/MuestraFollow";
 
 export const AppRouter = () => {

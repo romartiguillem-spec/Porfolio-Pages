@@ -1,6 +1,6 @@
 
 import { useTrabajos } from "@/hooks/UseTrabajos/useTrabajos"; // Importas tu hook personalizado
-import { Estilos } from "@/pages/Trabajos/Estilos"; // Importas tu componente visual
+import { Estilos } from "@/pages/trabajos/Estilos";
 import type { ITrabajos } from "@/model/interfaces/ITrabajos";
 
 export const TrabajosMuestra = () => {
