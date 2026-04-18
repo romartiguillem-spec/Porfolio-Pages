@@ -3,4 +3,6 @@ export interface IRedes {
     nombre:         string;
     url:            string;
     icono:          string;
+    estilos:        string;
+    imagenurl:      string;
 }

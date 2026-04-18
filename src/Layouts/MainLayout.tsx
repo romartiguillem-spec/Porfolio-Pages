@@ -1,20 +1,26 @@
+import { Footer } from '@/components/Footer'
 import  NavBar  from '../components/NavBar'
 import { Outlet } from 'react-router-dom'
 
 export const MainLayout = () => {
   return (
-    <>
-        <header>
-            <NavBar />
-        </header>
-        <main>
-            {/* El componente Outlet es un componente de React Router que se utiliza para renderizar los componentes hijos de una ruta. En este caso, el componente Outlet se utiliza para renderizar los componentes Home, Trabajos y Contacto, dependiendo de la ruta que se haya seleccionado en el NavBar. */}
-            <Outlet />
-        </main>
-        <footer>
-            Este es el pie de página de mi portfolio
-        </footer>
-    
-    </>
-  )
-}
+    /* min-h-screen: Asegura que el contenedor mida al menos el 100% de la pantalla.
+       flex-col: Apila header, main y footer verticalmente.
+    */
+    <div className="flex flex-col min-h-screen bg-slate-950">
+      <header>
+        <NavBar />
+      </header>
+
+      {/* flex-grow: Esta es la clave. Hace que el contenido principal 
+         se estire para ocupar todo el espacio disponible, empujando 
+         el footer hacia el final.
+      */}
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+
+      <Footer />
+    </div>
+  );
+};

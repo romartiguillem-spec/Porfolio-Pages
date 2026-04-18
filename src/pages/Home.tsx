@@ -14,7 +14,7 @@ export default function Home() {
             Freeland que se dedica a la paginación web profesional. Utilizo todo tipo de lenguages de programación, los más utilizados son React, HTML, CSS y JS.
           </p>
         </div>
-        <img alt="Imagen de un informatico sentado" src="/Informatico.png" className="w-full max-w-xs lg:max-w-md h-auto objet-contrain"></img>
+        <img alt="Imagen de un informatico sentado" src="/Informatico.png" className="w-full max-w-xs lg:max-w-md h-auto object-contain"></img>
         {/*w-full max-w-xs lg:max-w-md esto lo que hace es que la imagen no se coma la pantalla en el mobil y el h-aut mantiene la proporcion automaticamente */}
       </div>
     </div>

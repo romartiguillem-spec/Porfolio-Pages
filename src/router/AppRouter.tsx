@@ -9,6 +9,7 @@ import { CursoMuestra } from "../pages/Cursos/CursoMuestra";
 import  Contacto  from "../pages/Contacto";
 import { CursoDetalleMuestra } from "@/pages/Cursos/DetalleTrabajos/CursoDetalleMuestra";
 import { TrabajosMuestra } from "@/pages/Trabajos/TrabajosMuestra";
+import { MuestraFollow } from "@/pages/Follow/MuestraFollow";
 
 export const AppRouter = () => {
     return (
@@ -23,7 +24,7 @@ export const AppRouter = () => {
                     <Route path="/cursos" element={<CursoMuestra  />} />
                     <Route path="/cursos/:id" element={<CursoDetalleMuestra  />} />
                     <Route path="/trabajos" element={<TrabajosMuestra  />} />
-
+                    <Route path="/follow" element={<MuestraFollow  />} />
                     <Route path="/contacto" element={<Contacto />} />
                     
                 </Route> 
